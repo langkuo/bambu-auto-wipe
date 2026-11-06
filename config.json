@@ -1,0 +1,8 @@
+{
+  "wipe_every_mm": 200.0,
+  "only_infill": true,
+  "retract_mm": 0.8,
+  "restore_mm": 0.8,
+  "retract_speed": 300,
+  "force_printer_model": null
+}
