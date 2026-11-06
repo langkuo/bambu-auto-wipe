@@ -27,6 +27,26 @@ Bambu Studio has no built-in "wipe by accumulated extrusion" feature. The stock 
 
 This script scans the full sliced G-code, counts real extrusion (honoring `G92 E0` resets and M82/M83 modes), and inserts a wipe cycle **mid-infill** exactly when your configured extrusion threshold is hit — never on outer walls or top surfaces.
 
+### 即使烘干耗材也难免裹头 / Even Dry Filament Clogs the Nozzle
+
+很多人觉得"我有干燥箱，边打边烘，就不需要擦嘴了"。实际上烘干只能减少**拉丝（stringing）**，不能完全避免**裹头（nozzle buildup / boogers）**：
+
+Many people think "I have a dry box, drying while printing, so no wiping needed." Drying only reduces **stringing** — it does **not** prevent **nozzle buildup (boogers)**:
+
+- 打印高温耗材（ABS/ASA/PA）时，喷嘴外壁的耗材长期加热会碳化堆积
+- 换料时残留的旧耗材不会完全被挤出，会在喷嘴口形成一层薄壳
+- 即使全新密封开封的卷料，打 30–50 米后喷嘴底部也会有明显积料
+- 积料到一定程度会蹭到模型侧面，留下无法修复的脏痕
+
+- High-temp filaments (ABS/ASA/PA) carbonize on the nozzle exterior over long prints
+- Residual filament from swaps leaves a thin shell at the nozzle tip
+- Even fresh-sealed spools develop visible buildup after 30–50 meters
+- Once buildup gets thick enough, it drags across the model surface leaving permanent smudges
+
+所以烘干和定期擦嘴不是二选一，而是**同时做**：烘干解决拉丝，自动擦嘴解决裹头。
+
+Drying and auto-wiping are not an either-you choose — they solve different problems. Drying fixes stringing; wiping fixes nozzle buildup.
+
 ---
 
 ## 安装 / Installation
